@@ -29,10 +29,65 @@
         }
     }
     </script>
+        <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "main"},
+                "identifier": "cnt"
+            }
+        },
+        "actionEventListener": {
+            "prototype": "montage/core/event/action-event-listener",
+            "properties": {
+                "removalStrategy": "hide"
+            }
+        },
+        "condition": {
+            "prototype": "montage/ui/condition.reel",
+            "properties": {
+                "element": {"#": "condition"},
+                "removalStrategy": "hide"
+            },
+            "bindings": {
+                "@text": {"<-": "@text", "converter": {"@": "text"}}
+            }
+        },
+        "image": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "image"},
+                "crossOrigin": null,
+                "src": "h"
+            }
+        },
+        "text": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "text"},
+                "identifier": "text",
+                "removalStrategy": "hide",
+                "value": "Whats up?"
+            }
+        }
+    }
+    </script>
+    </head>
+
 </head>
 <body>
     <span class="loading"></span>
     
+     <div data-montage-id="main" data-montage-skin="light" class="Main">
+         @button
+         @button
+         <div data-montage-id="condition"></div>
+         <p data-montage-id="text">
+
+         </p>
+         <img data-montage-id="image">
+    </div>
+
     
     <div data-montage-id="main" data-montage-skin="light" class="Main">test</div>
      <div data-montage-id="cnt data-montage-skin="light" class="Main">test</div>
