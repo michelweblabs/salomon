@@ -1,0 +1,37 @@
+{
+  "blueprint_component_reference": {
+    "prototype": "montage/core/meta/blueprint-reference",
+    "properties": {
+      "valueReference": {
+        "blueprintName": "Component",
+        "blueprintModule": {
+          "%": "montage/ui/component.meta"
+        }
+      }
+    }
+  },
+  "blueprint_unnamed_onclick": {
+    "prototype": "montage/core/meta/event-blueprint",
+    "properties": {
+      "name": "onclick",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "root": {
+    "prototype": "montage/core/meta/module-blueprint",
+    "properties": {
+      "name": null,
+      "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprintGroups": {
+        "Main": []
+      },
+      "eventBlueprints": [
+        {"@": "blueprint_unnamed_onclick"}
+      ],
+      "module": {
+        "%": "ui/main.reel"
+      },
+      "exportName": "Main"
+    }
+  }
+}
