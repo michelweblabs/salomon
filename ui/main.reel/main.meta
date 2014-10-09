@@ -10,6 +10,13 @@
       }
     }
   },
+  "blueprint_unnamed_cnt": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "cnt",
+      "blueprint": {"@": "root"}
+    }
+  },
   "blueprint_unnamed_onclick": {
     "prototype": "montage/core/meta/event-blueprint",
     "properties": {
@@ -22,8 +29,13 @@
     "properties": {
       "name": null,
       "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_cnt"}
+      ],
       "propertyBlueprintGroups": {
-        "Main": []
+        "Main": [
+          {"@": "blueprint_unnamed_cnt"}
+        ]
       },
       "eventBlueprints": [
         {"@": "blueprint_unnamed_onclick"}
