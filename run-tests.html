@@ -13,6 +13,69 @@
 
     <script src="node_modules/montage/montage.js" data-module="test/all"></script>
     
-    
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>
+                Main
+            </title>
+            <link rel="stylesheet" href="main.css">
+            <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "main"},
+                "identifier": "cnt"
+            }
+        },
+        "actionEventListener": {
+            "prototype": "montage/core/event/action-event-listener",
+            "properties": {
+                "removalStrategy": "hide"
+            }
+        },
+        "condition": {
+            "prototype": "montage/ui/condition.reel",
+            "properties": {
+                "element": {"#": "condition"},
+                "removalStrategy": "hide"
+            },
+            "bindings": {
+                "@text": {"<-": "@text", "converter": {"@": "text"}}
+            }
+        },
+        "image": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "image"},
+                "crossOrigin": null,
+                "src": "h"
+            }
+        },
+        "text": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "text"},
+                "identifier": "text",
+                "removalStrategy": "hide",
+                "value": "Whats up?"
+            }
+        }
+    }
+            </script>
+        </head>
+        <body>
+            <div data-montage-id="main" data-montage-skin="light" class="Main">
+                @button
+                @button
+                <div data-montage-id="condition"></div>
+                <p data-montage-id="text">
+
+                </p>
+                <img data-montage-id="image">
+            </div>
+        </body>
+    </html>
 </body>
 </html>
